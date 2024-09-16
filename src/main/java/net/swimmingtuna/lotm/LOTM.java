@@ -40,15 +40,12 @@ import java.util.function.Supplier;
 @Mod(LOTM.MOD_ID)
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class LOTM {
-
     public static final int NEW_STRUCTURE_SIZE = 512;
     public static Supplier<Boolean> fadeOut;
     public static Supplier<Integer> fadeTicks;
     public static Supplier<Double> maxBrightness;
     public static Supplier<Double> fadeRate = () -> maxBrightness.get() / fadeTicks.get();
-
     public static final String MOD_ID = "lotm";
-
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public LOTM() {
